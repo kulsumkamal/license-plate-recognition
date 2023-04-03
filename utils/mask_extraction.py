@@ -48,7 +48,7 @@ for index, row in boundaries.iterrows():
     masked_image = cv2.bitwise_and(image, mask)
 
     # Construct the file name for the output image using os.path.join
-    file_name = os.path.join(folder_path, str(index)+".jpg")
+    file_name = os.path.join(folder_path, images[index][1])
 
     # Save the masked image to the output folder
     cv2.imwrite(file_name, masked_image)
